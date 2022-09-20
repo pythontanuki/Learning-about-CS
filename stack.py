@@ -8,40 +8,40 @@ class Stack:
     def __init__(self):
         self.head = None
     
-    #push data to Stack
     def push(self, data):
-        node = Node(data)
-        nextNode = self.head
-        self.head = node
-        self.head.next = nextNode
+        newNode = Node(data)
+        tmpNode = self.head
+        self.head = newNode
+        self.head.next = tmpNode
     
-    #pop from Stack
+    
     def pop(self):
         if self.head == None:
             return None
         currentNode = self.head
-        nextNode = self.head.next
-        self.head = nextNode
+        self.head = self.head.next
         return currentNode.data
-
-    #retrieve Stack top
+    
+    
     def peek(self):
         if self.head == None:
             return None
         return self.head.data
+    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+if __name__ == '__main__':
+    S = Stack()
+    S.push(2)
+    print(S.peek())
+    S.push(4)
+    print(S.peek())
+    S.push(6)
+    print(S.peek())
+    S.pop()
+    print(S.peek())
+    S.pop()
+    print(S.peek())
+    S.pop()
+    print(S.peek())
     
