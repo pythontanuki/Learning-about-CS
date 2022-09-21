@@ -21,7 +21,7 @@ class Deque:
         return self.tail.data
     
     
-    def enqueFront(self, data):
+    def enqueueFront(self, data):
         newNode = Node(data)
         if self.head == None:
             self.head = newNode
@@ -34,7 +34,7 @@ class Deque:
             self.head.prev = None
     
     
-    def enqueBack(self, data):
+    def enqueueBack(self, data):
         newNode = Node(data)
         if self.head == None:
             self.head = newNode
